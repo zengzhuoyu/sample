@@ -321,7 +321,7 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
-  src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1) format("embedded-opentype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760) format("svg");
+  src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1) format("embedded-opentype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?f721466883998665b87923b92dea655b) format("svg");
 }
 
 .glyphicon {
@@ -8460,5 +8460,66 @@ footer img.brand-icon {
 footer .slogon {
   font-size: 13px;
   font-weight: bold;
+}
+
+/* sidebar */
+
+aside section {
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+aside section:first-child {
+  border: 0;
+  padding-top: 0;
+}
+
+aside section span {
+  display: block;
+  margin-bottom: 3px;
+  line-height: 1;
+}
+
+section.user_info {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+section.user_info .gravatar {
+  float: none;
+  max-width: 70px;
+}
+
+section.user_info h1 {
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+  margin-top: 15px;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+/* forms */
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+.panel {
+  margin-top: 50px;
 }
 
