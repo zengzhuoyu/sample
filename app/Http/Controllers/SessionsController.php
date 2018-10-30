@@ -1,5 +1,7 @@
 <?php
 
+// 登录
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,6 +10,15 @@ use Auth;
 
 class SessionsController extends Controller
 {
+
+    public function __construct()
+    {
+        // 只有未登录用户才能访问的方法
+        $this->middleware('guest', [
+            'only' => ['create']
+        ]);
+    }
+
     public function create()
     {
         return view('sessions.create');
@@ -22,7 +33,7 @@ class SessionsController extends Controller
 
        if (Auth::attempt($credentials, $request->has('remember'))) {
            session()->flash('success', '欢迎回来！');
-           return redirect()->route('users.show', [Auth::user()]);
+           return redirect()->intended(route('users.show', [Auth::user()]));
        } else {
            session()->flash('danger', '很抱歉，您的邮箱和密码不匹配');
            return redirect()->back();
